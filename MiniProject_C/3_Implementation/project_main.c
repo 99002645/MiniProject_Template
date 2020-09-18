@@ -1,112 +1,162 @@
-#include <calculator_operations.h>
 
-/* Status of the operation requested */
-#define VALID   (1)
-#define INVALID (0)
-
-/* Calculator operation requested by user*/
-unsigned int calculator_operation = 0;
-
-/* Operands on which calculation is performed */
-int calculator_operand1 = 0;
-int calculator_operand2 = 0;
-
-/* Valid operations */
-enum operations{ ADD=1, SUBTRACT, MULTIPLY, DIVIDE, EXIT };
-
-/* Display the menu of operations supported */
-void calculator_menu(void);
-/* Verifies the requested operations validity */
-int valid_operation(int operation);
-
-
-/* Start of the application */
-int main(int argc, char *argv[])
+char*cat;
+structmeroDateissued;
+structmeroDateduedate;
+};
+structbooksa;
+intmain()
 {
-    printf("\n****Calculator****\n");
-    while(1)
-    {
-        calculator_menu();
-    }
+Password();
+getch();
+return0;
 }
-
-void calculator_menu(void)
+voidmainmenu()
 {
-    printf("\nAvailable Operations\n");
-    printf("\n1. Add\n2. Subtract\n3. Multiply\n4. Divide\n5. Exit");
-    printf("\n\tEnter your choice\n");
-   
-     __fpurge(stdin);
-    scanf("%d", &calculator_operation);
-
-    if(EXIT == calculator_operation)
-    {
-        printf("\nThank you. Exiting the Application\n");
-        exit(0);
-    }
-
-    if(INVALID != valid_operation(calculator_operation))
-    {
-        printf("\n\tEnter your Numbers with space between them\n");
-        __fpurge(stdin);
-        scanf("%d %d", &calculator_operand1, &calculator_operand2);
-    }
-    else
-    {
-        printf("\n\t---Wrong choice---\nEnter to continue\n");
-        __fpurge(stdin);
-        getchar();
-        return;
+//loaderanim();
+system("cls");
+// textbackground(13);
+  inti;
+gotoxy(20,3);
+printf("\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2 MAIN MENU
+\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2");
+// show_mouse();
+gotoxy(20,5);
+printf("\xDB\xDB\xDB\xDB\xB21.AddBooks ");
+gotoxy(20,7);
+printf("\xDB\xDB\xDB\xDB\xB22.Deletebooks");
+gotoxy(20,9);
+printf("\xDB\xDB\xDB\xDB\xB23.SearchBooks");
+gotoxy(20,11);
+printf("\xDB\xDB\xDB\xDB\xB24.IssueBooks");
+gotoxy(20,13);
+printf("\xDB\xDB\xDB\xDB\xB25.ViewBooklist");
+gotoxy(20,15);
+printf("\xDB\xDB\xDB\xDB\xB26.EditBook'sRecord");
+gotoxy(20,17);
+printf("\xDB\xDB\xDB\xDB\xB27.CloseApplication");
+gotoxy(20,19);
+printf("\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\
         
-    }
-    switch(calculator_operation)
-    {
-        case ADD:
-            printf("\n\t%d + %d = %d\nEnter to continue", 
-            calculator_operand1, 
-            calculator_operand2,
-            add(calculator_operand1, calculator_operand2));
-            
-            __fpurge(stdin);
-            getchar();
-            break;
-        case SUBTRACT:
-            printf("\n\t%d - %d = %d\nEnter to continue", 
-            calculator_operand1, 
-            calculator_operand2,
-            subtract(calculator_operand1, calculator_operand2));
-            
-            __fpurge(stdin);
-            getchar();
-            break;
-        case MULTIPLY:
-            printf("\n\t%d * %d = %d\nEnter to continue", 
-            calculator_operand1, 
-            calculator_operand2,
-            multiply(calculator_operand1, calculator_operand2));
-            
-            __fpurge(stdin);
-            getchar();
-            break;
-        case DIVIDE:
-            printf("\n\t%d / %d = %d\nEnter to continue", 
-            calculator_operand1, 
-            calculator_operand2,
-            divide(calculator_operand1, calculator_operand2));
-            
-            __fpurge(stdin);
-            getchar();
-            break;
-        case 5:
-            exit(0);
-            break;
-        default:
-            printf("\n\t---It should never come here---\n");
-    }
-}
-
-int valid_operation(int operation)
+FILE*fp,*ft,*fs;
+COORDcoord={0,0};
+//listofglobalvariable
+ints;
+charfindbook;
+charpassword[10]={"codewithc"};
+voidgotoxy(intx,inty)
 {
-    /* Check if the operation is a valid operation */
-    return ((ADD <= operation) && (EXIT >= operation)) ? VALID: INVALID;
+coord.X=x;coord.Y=y;//XandYcoordinates
+SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE),coord);
+}
+structmeroDate
+{
+intmm,dd,yy;
+};
+structbooks
+{
+intid;
+charstname[20];
+charname[20];
+charAuthor[20];
+intquantity;
+floatPrice;
+intcount;
+intrackno;
+char*cat;
+structmeroDateissued;
+structmeroDateduedate;
+};
+structbooksa;
+intmain()
+{
+Password();
+getch();
+return0;
+}
+voidmainmenu()
+{
+//loaderanim();
+system("cls");
+// textbackground(13);
+  inti;
+gotoxy(20,3);
+printf("\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2 MAIN MENU
+\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2");
+// show_mouse();
+gotoxy(20,5);
+printf("\xDB\xDB\xDB\xDB\xB21.AddBooks ");
+gotoxy(20,7);
+printf("\xDB\xDB\xDB\xDB\xB22.Deletebooks");
+gotoxy(20,9);
+printf("\xDB\xDB\xDB\xDB\xB23.SearchBooks");
+gotoxy(20,11);
+printf("\xDB\xDB\xDB\xDB\xB24.IssueBooks");
+gotoxy(20,13);
+printf("\xDB\xDB\xDB\xDB\xB25.ViewBooklist");
+gotoxy(20,15);
+printf("\xDB\xDB\xDB\xDB\xB26.EditBook'sRecord");
+gotoxy(20,17);
+printf("\xDB\xDB\xDB\xDB\xB27.CloseApplication");
+gotoxy(20,19);
+printf("\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\
+xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2
+\xB2");
+gotoxy(20,20);
+t();
+gotoxy(20,21);
+printf("Enteryourchoice:");
+switch(getch())
+       
+{
+case'1':
+addbooks();
+break;
+case'2':
+deletebooks();
+break;
+case'3':
+searchbooks();
+break;
+case'4':
+issuebooks();
+break;
+case'5':
+viewbooks();
+break;
+case'6':
+editbooks();
+break;
+case'7':
+{
+system("cls");
+gotoxy(16,3);
+printf("\tLibraryManagementSystem");
+gotoxy(16,4);
+printf("\tMiniProjectinC");
+gotoxy(16,5);
+printf("\tisbroughttoyouby");
+gotoxy(16,7);
+printf("\tCodewithCTeam");
+gotoxy(16,8);
+printf("******************************************");
+gotoxy(16,10);
+printf("*******************************************");
+gotoxy(16,11);
+printf("*******************************************");
+gotoxy(16,13);
+printf("********************************************");
+gotoxy(10,17);
+printf("Exitingin3second...........>");
+//flushall();
+Sleep(3000);
+exit(0);
+}
+default:
+{
+gotoxy(10,23);
+printf("\aWrongEntry!!Pleasere-enteredcorrectoption");
+if(getch())
+mainmenu();
+}
+}
 }
